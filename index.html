@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sandeep Biological Supply House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sandeep Biological Supply House: Premium chemicals, reagents, glassware, and lab equipment for research, education, pharma, and industry." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(120deg, #e6edf7 0%, #f5fafc 100%);
+    }
+    header {
+      background: #253052;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 18px 40px;
+      box-shadow: 0 1px 8px #bcd;
+    }
+    header img {
+      height: 60px;
+      margin-right: 20px;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      color: white;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    nav {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 700;
+      font-size: 1.09rem;
+      transition: color 0.2s;
+      letter-spacing: 0.5px;
+    }
+    nav a:hover {
+      color: #7abf8d;
+    }
+    .promo-bar {
+      background: #7abf8d;
+      color: white;
+      padding: 13px 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px #bcd;
+    }
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px 35px 20px;
+      color: #253052;
+      background: radial-gradient(ellipse at 40% 20%, #f0fff0 60%, #e6edf7 100%);
+      min-height: 340px;
+      position: relative;
+    }
+    .hero h2 {
+      font-size: 2.7rem;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: #253052;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1.14rem;
+      max-width: 660px;
+      margin-bottom: 36px;
+      line-height: 1.5;
+      color: #415495;
+    }
+    .cta-button {
+      background: #33425b;
+      color: white;
+      padding: 14px 36px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 3px 8px rgba(51, 66, 91, 0.12);
+      margin-bottom: 18px;
+    }
+    .cta-button:hover {
+      background: #506a8b;
+      box-shadow: 0 5px 12px rgba(80, 106, 139, 0.22);
+    }
+    .search-bar {
+      width: 100%;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+    .search-bar input[type="search"] {
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 8px 0 0 8px;
+      border: 1.5px solid #a5c7c7;
+      font-size: 1.07rem;
+      outline: none;
+    }
+    .search-bar button {
+      background-color: #7abf8d;
+      color: white;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      padding: 13px 26px;
+      font-size: 1.07rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-bar button:hover {
+      background-color: #4a8667;
+    }
+    .quick-links-row {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 45px auto 30px auto;
+      gap: 28px;
+      justify-content: center;
+    }
+    .cat-box {
+      background: linear-gradient(135deg, #fff 82%, #e6f6ef 100%);
+      border-radius: 15px;
+      box-shadow: 0 4px 24px #d2e2f799;
+      width: 200px;
+      height: 98px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.09rem;
+      color: #253052;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.14s, box-shadow 0.15s;
+      border: none;
+    }
+    .cat-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 45px #7abf8d33;
+      color: #277b4e;
+    }
+    /* Bulk/Institution Enquiry */
+    .enquiry-cta {
+      background: #e0f7e9;
+      color: #253052;
+      box-shadow: 0 4px 18px #c2e3d874;
+      border-radius: 12px;
+      margin: 32px auto 20px auto;
+      max-width: 510px;
+      padding: 34px 18px;
+      text-align: center;
+      font-size: 1.12rem;
+    }
+    .enquiry-cta .cta {
+      background: #7abf8d;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 7px;
+      padding: 12px 30px;
+      font-size: 1rem;
+      margin-top: 17px;
+      display: inline-block;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .enquiry-cta .cta:hover {
+      background: #2d8463;
+    }
+    /* Highlights section */
+    .highlights {
+      max-width: 940px;
+      margin: 26px auto 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      padding: 12px 0;
+    }
+    .highlight-box {
+      background: #f9fcfa;
+      border-radius: 10px;
+      box-shadow: 0 2px 9px #cdf3dc70;
+      padding: 25px 18px;
+      min-width: 200px;
+      flex: 1 1 210px;
+      text-align: center;
+      font-size: 1.06rem;
+    }
+    .highlight-box strong {
+      color: #253052;
+    }
+    /* Testimonials */
+    .testimonials {
+      background: #f2f4fa;
+      padding: 30px 0 15px 0;
+      margin-top: 35px;
+    }
+    .testimonial-group {
+      max-width: 950px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .testimonial-box {
+      flex: 1 1 240px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 18px #aecbe644;
+      padding: 26px 19px;
+      font-size: 1.07rem;
+      color: #33425b;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+    .testimonial-box .author {
+      font-weight: 700;
+      font-size: 0.97rem;
+      margin-top: 15px;
+      color: #277b4e;
+    }
+    footer {
+      text-align: center;
+      background: #253052;
+      color: #eee;
+      padding: 22px 10px 13px 10px;
+      font-size: 1.09rem;
+      box-shadow: 0 -2px 10px #bcd;
+      margin-top: auto;
+    }
+    .footer-contact {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #bce5cd;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+      nav a {
+        margin: 0 7px;
+        font-size: 0.96rem;
+      }
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+      .hero p {
+        font-size: 0.97rem;
+        max-width: 93vw;
+      }
+      .quick-links-row,
+      .highlights,
+      .testimonial-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+      .cat-box,
+      .highlight-box,
+      .testimonial-box {
+        width: 95vw;
+        min-width: 0;
+      }
+      .testimonials {
+        padding: 18px 0 7px 0;
+      }
+      .enquiry-cta {
+        font-size: 0.99rem;
+        margin: 22px 6px 13px 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo" />
+    <h1>Sandeep Biological Supply House</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="promo-bar">
+    End-of-year markdowns—save big on selected chemicals & equipment!
+  </div>
+
+  <section class="hero">
+    <h2>Chemicals and Scientific Equipment Store</h2>
+    <p>
+      Discover over 4000 premium chemicals, reagents, glassware, and scientific instruments. Serving research, education, pharma, and industry with certified quality and fast delivery since 1986.
+    </p>
+    <a href="products.html" class="cta-button">Browse Products</a>
+  </section>
+
+    <div class="highlights">
+    <div class="highlight-box">
+      <strong>ISO & CE Certified</strong><br>
+      International quality assurance for labs and industry.
+    </div>
+    <div class="highlight-box">
+      <strong>Exclusive Offers</strong><br>
+      Save on top-selling chemicals and kits.
+    </div>
+    <div class="highlight-box">
+      <strong>Expert Support</strong><br>
+      Decades of technical experience—call us anytime!
+    </div>
+    <div class="highlight-box">
+      <strong>Fast Nationwide Delivery</strong><br>
+      PAN India shipping, premium packaging, and tracking.
+    </div>
+  </div>
+
+  <div class="enquiry-cta">
+    Bulk or Institutional Buyer? <br>
+    <span>Contact us for custom quotes & tenders</span><br>
+    <a href="contact.html" class="cta">Institution Enquiry</a>
+  </div>
+
+
+
+  <section class="testimonials">
+    <div class="testimonial-group">
+      <div class="testimonial-box">
+        "Top-quality chemicals and always reliable delivery for our college lab. They are always our first choice."
+        <div class="author">– Dr. Monica S., Radhna College</div>
+      </div>
+      <div class="testimonial-box">
+        "Their team is truly helpful and always goes the extra mile for custom requirements."
+        <div class="author">– Sanjay R., Biotech Startup</div>
+      </div>
+      <div class="testimonial-box">
+        "Competitive prices and genuine products—never disappointed."
+        <div class="author">– Lab Supplies Manager, Pharma Inc.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Sandeep Biological Supply House
+    <div class="footer-contact">
+      📧 info@sandeepbio.com &nbsp; | &nbsp; ☎️ +91-712-3245678<br>
+      📍 Plot 12, MIDC Estate, Nagpur – 440016
+    </div>
+  </footer>
+<script src="assets/cart.js"></script></body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart - Sandeep Biological Supply House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #f5fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header,
+    footer {
+      background: #253052;
+      color: #fff;
+      padding: 20px;
+    }
+
+    #cart-list td,
+    #cart-list th {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cart-total {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .payment-form {
+      background: #f8fff8;
+      padding: 22px;
+      border-radius: 10px;
+      max-width: 430px;
+      margin: 30px auto;
+    }
+
+    .payment-form input {
+      margin-bottom: 14px;
+      padding: 10px;
+      width: 90%;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .payment-form button {
+      background: #33425b;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 7px;
+      border: none;
+      font-size: 1.06rem;
+      cursor: pointer;
+    }
+
+    .payment-form button:hover {
+      background: #7abf8d;
+    }
+
+    .cart-actions button {
+      background: #d9534f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .cart-actions button:hover {
+      background: #c9302c;
+    }
+
+    .cart-empty {
+      color: #33425b;
+      font-size: 1.19rem;
+      padding: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <span style="font-size:1.15rem;">🛒</span> Your Cart
+    <nav style="float:right;">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+       <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 style="text-align:center; color:#253052;">Cart Details</h2>
+    <div id="cart-view"></div>
+
+    <div class="payment-form" id="payment-section" style="display:none;">
+      <h3 style="color:#253052;">Checkout</h3>
+      <form onsubmit="submitOrder(event)">
+        <input type="text" name="buyer_name" required placeholder="Full Name" />
+        <input type="email" name="buyer_email" required placeholder="Email" />
+        <input type="text" name="buyer_phone" required placeholder="Phone" />
+        <input type="text" name="buyer_address" required placeholder="Address" />
+        <select name="payment_method" required>
+          <option value="">Select Payment Option</option>
+          <option value="upi">UPI</option>
+          <option value="card">Card</option>
+          <option value="cod">Cash on Delivery</option>
+        </select>
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Sandeep Biological Supply House
+  </footer>
+
+  <script src="assets/cart.js"></script>
+</body>
+
+</html>

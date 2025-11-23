@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Products - Sandeep Biological Supply House</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(120deg, #e6edf7 0%, #f5fafc 100%);
+    }
+    header {
+      background: #253052;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 1px 8px #bcd;
+    }
+    header img {
+      height: 60px;
+      margin-right: 20px;
+    }
+    nav {
+      margin-left: auto;
+    }
+    nav a {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 20px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #7abf8d;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 50px auto 80px;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #253052;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    #searchInput {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto 30px auto;
+      padding: 12px 16px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-shadow: inset 0 1px 3px #ddd;
+      transition: border-color 0.2s;
+    }
+    #searchInput:focus {
+      border-color: #7abf8d;
+      outline: none;
+      box-shadow: 0 0 6px #7abf8daa;
+    }
+    .categories-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+    .category-card {
+      background: linear-gradient(135deg, #fff 85%, #e6f6ef 100%);
+      border-radius: 14px;
+      box-shadow: 0 3px 24px #d2e2f799;
+      width: 260px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.18rem;
+      color: #253052;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      padding: 16px;
+    }
+    .category-card:hover {
+      transform: translateY(-6px) scale(1.04);
+      box-shadow: 0 8px 36px #7abf8d50;
+      background: linear-gradient(135deg, #ebf9ef 43%, #c7ecec 100%);
+      color: #2d8463;
+    }
+    .category-card br {
+      margin-bottom: 4px;
+    }
+    @media (max-width: 900px) {
+      .categories-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+      .category-card {
+        width: 90vw;
+        min-width: 220px;
+        max-width: 450px;
+      }
+    }
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 28px;
+      }
+      nav a {
+        margin: 0 12px;
+        font-size: 1rem;
+      }
+      .category-card {
+        font-size: 1rem;
+        height: auto;
+        padding: 20px 8px;
+      }
+      footer {
+        font-size: 0.95rem;
+        padding: 14px 0 10px 0;
+      }
+    }
+    footer {
+      width: 100%;
+      background: #253052;
+      color: #eee;
+      text-align: center;
+      padding: 22px 0 16px 0;
+      box-shadow: 0 -2px 10px #bcd;
+      font-size: 1.04rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" aria-current="page">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>Product Categories</h2>
+    <input id="searchInput" type="search" placeholder="Search categories..." aria-label="Search categories" />
+    <div class="categories-list" id="categoriesList">
+      <div class="category-card" data-keywords="HPLC Solvents filtered 0.2mm filter" onclick="window.location.href='hplc-solvents.html'">HPLC Solvents<br>Filtered through 0.2mm filter</div>
+      <div class="category-card" data-keywords="IP USP Chemicals" onclick="window.location.href='ip-usp-chemicals.html'">IP / USP Chemicals</div>
+      <div class="category-card" data-keywords="European Pharmacopoeia Certified Products" onclick="window.location.href='ph-eur-chemicals.html'">European Pharmacopoeia Certified Products</div>
+      <div class="category-card" data-keywords="Chromatographic Adsorbents" onclick="window.location.href='chromatographic.html'">Chromatographic Adsorbents</div>
+      <div class="category-card" data-keywords="Food Grade Products" onclick="window.location.href='food-grade.html'">Food Grade Products</div>
+      <div class="category-card" data-keywords="Chemicals Dairy Milk Industry" onclick="window.location.href='dairy.html'">Chemicals For Dairy<br>Milk Industry</div>
+      <div class="category-card" data-keywords="Microscopical Stain Powders" onclick="window.location.href='micro-stain-powder.html'">Microscopical Stain Powders</div>
+      <div class="category-card" data-keywords="Microscopical Stain Solutions" onclick="window.location.href='micro-stain-solution.html'">Microscopical Stain Solutions</div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Sandeep Biological Supply House
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoriesList = document.getElementById('categoriesList');
+    const categoryCards = categoriesList.querySelectorAll('.category-card');
+
+    searchInput.addEventListener('keyup', function () {
+      const filter = this.value.toLowerCase().trim();
+      if (!filter) {
+        categoryCards.forEach(card => card.style.display = '');
+        return;
+      }
+      categoryCards.forEach(card => {
+        const keywords = card.getAttribute('data-keywords').toLowerCase();
+        if (keywords.includes(filter)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+<script src="assets/cart.js"></script></body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact - Sandeep Biological Supply House</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(120deg, #e6edf7 0%, #f5fafc 100%);
+    }
+    header {
+      background: #253052;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 1px 8px #bcd;
+    }
+    header img {
+      height: 60px;
+      margin-right: 20px;
+  
+    }
+    nav {
+      margin-left: auto;
+    }
+    nav a {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 20px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #7abf8d;
+    }
+    main.contact-container {
+      flex: 1;
+      max-width: 1100px;
+      margin: 50px auto 80px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    section.form-section, section.map-section {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px #d0d9e4bb;
+      padding: 30px;
+      flex: 1 1 400px;
+      min-width: 320px;
+    }
+    h2 {
+      color: #253052;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      height: 450px;
+      box-shadow: 0 4px 14px #a3b9c7aa;
+    }
+    footer {
+      width: 100%;
+      background: #253052;
+      color: #eee;
+      text-align: center;
+      padding: 22px 0 16px 0;
+      box-shadow: 0 -2px 10px #bcd;
+      font-size: 1.04rem;
+      margin-top: auto;
+    }
+    @media (max-width: 720px) {
+      main.contact-container {
+        flex-direction: column;
+        max-width: 90vw;
+        margin: 30px auto 60px auto;
+      }
+      section.form-section, section.map-section {
+        min-width: 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main class="contact-container">
+    <section class="form-section">
+      <h2>Contact Us</h2>
+      <!-- Replace the src below with your Google Form embed link -->
+      <iframe src="https://forms.gle/XDXnFmoKE8KWoLKDA" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowfullscreen></iframe>
+    </section>
+    <section class="map-section">
+      <h2>Our Location</h2>
+      <!-- Replace src with your Google Maps embed URL -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.0434081067833!2d73.711772!3d24.587698099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e5911b5b7ed1%3A0x65f28f8a1723c718!2sSandeep%20Biological%20Supply%20House!5e0!3m2!1sen!2sin!4v1762283948284!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        aria-hidden="false"
+        tabindex="0">
+      </iframe>
+    </section>
+
+  </main>
+  <footer>
+    &copy; 2025 Sandeep Biological Supply House
+  </footer>
+<script src="assets/cart.js"></script></body>
+</html>

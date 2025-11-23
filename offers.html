@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Special Offers - Sandeep Biological Supply House</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(120deg, #e6edf7 0%, #f5fafc 100%);
+    }
+    header {
+      background: #253052;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 1px 8px #bcd;
+    }
+    header img {
+      height: 60px;
+      margin-right: 20px;
+    }
+    nav {
+      margin-left: auto;
+    }
+    nav a {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 20px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #7abf8d;
+    }
+    .offers {
+      flex: 1;
+      max-width: 900px;
+      margin: 50px auto 80px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #253052;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+    .offer-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px #d2e2f7a8;
+      padding: 22px 30px;
+      margin-bottom: 24px;
+      transition: box-shadow 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .offer-card:hover {
+      box-shadow: 0 8px 26px #7abf8d93;
+      transform: scale(1.02);
+      background: #e8f5e9;
+    }
+    .offer-card h3 {
+      font-size: 1.5rem;
+      color: #33425b;
+      margin-bottom: 8px;
+    }
+    .offer-card p {
+      font-size: 1.1rem;
+      color: #4a5568;
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      background: #253052;
+      color: #eee;
+      padding: 18px 10px;
+      font-size: 1.05rem;
+      box-shadow: 0 -2px 10px #bcd;
+      margin-top: auto;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 28px;
+      }
+      .offer-card h3 {
+        font-size: 1.25rem;
+      }
+      .offer-card p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section class="offers">
+    <h2>Special Offers</h2>
+    <div class="offer-card" onclick="addToCart('Enquire about Methanol (HPLC)')">
+      <h3>Methanol (HPLC)</h3>
+      <p>80% off this month | Only ₹3,000</p>
+    </div>
+    <div class="offer-card" onclick="addToCart('Enquire about Sartorius Quintix Pro Balance')">
+      <h3>Sartorius Quintix Pro Balance</h3>
+      <p>31% off — Best precision balance for lab research</p>
+    </div>
+    <div class="offer-card" onclick="addToCart('Enquire about Fisherbrand Elite Adjustable-Volume Pipettors')">
+      <h3>Fisherbrand Elite Adjustable-Volume Pipettors</h3>
+      <p>58% discount — High reliability pipetting solutions</p>
+    </div>
+    <!-- Add more offer cards as per your brochure -->
+  </section>
+  <footer>
+    &copy; 2025 Sandeep Biological Supply House
+  </footer>
+<script src="assets/cart.js"></script></body>
+</html>
