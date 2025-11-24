@@ -9,54 +9,32 @@
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
+      background: #f5fafc;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background: linear-gradient(120deg, #e6edf7 0%, #f5fafc 100%);
+      padding-top: 72px; /* Fixed header height */
+      
     }
-    header {
-      background: #253052;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 1px 8px #bcd;
-    }
-    header img {
-      height: 60px;
-      margin-right: 20px;
-    }
-    nav {
-      margin-left: auto;
-    }
-    nav a {
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin: 0 20px;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #7abf8d;
-    }
+    
+    
     .container {
-      max-width: 1100px;
-      margin: 50px auto 80px;
+      /* max-width: 1100px; */
+      margin: 50px;
       padding: 0 20px;
     }
     h2 {
       text-align: center;
       font-size: 2.2rem;
       color: #253052;
-      margin-bottom: 10px;
+      margin-bottom: 28px;
       letter-spacing: 1px;
     }
     #searchInput {
       width: 100%;
       max-width: 400px;
       display: block;
-      margin: 0 auto 30px auto;
+      margin: 0 auto 65px auto;
       padding: 12px 16px;
       font-size: 1.1rem;
       border-radius: 8px;
@@ -144,16 +122,22 @@
       margin-top: auto;
     }
   </style>
+    <link rel="stylesheet" href="assets/header.css">
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="Logo" />
-    <nav>
+    <nav id="mainNav" class="nav-links">
       <a href="index.html">Home</a>
-      <a href="products.html" aria-current="page">Products</a>
+      <a href="products.html">Products</a>
       <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <section class="container">
@@ -174,7 +158,14 @@
   <footer>
     &copy; 2025 Sandeep Biological Supply House
   </footer>
-
+<script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
   <script>
     const searchInput = document.getElementById('searchInput');
     const categoriesList = document.getElementById('categoriesList');

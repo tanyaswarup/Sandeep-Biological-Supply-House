@@ -3,49 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <title>Contact - Sandeep Biological Supply House</title>
-  <link rel="stylesheet" href="assets/styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
+      background: #f5fafc;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background: linear-gradient(120deg, #e6edf7 0%, #f5fafc 100%);
+      padding-top: 120px!important; /* Fixed header height */
     }
-    header {
-      background: #253052;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 1px 8px #bcd;
+    .nav-links a {
+    font-size: 1.3rem !important;
+    }header{
+      padding: 30px 24px !important;
     }
-    header img {
-      height: 60px;
-      margin-right: 20px;
-  
-    }
-    nav {
-      margin-left: auto;
-    }
-    nav a {
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin: 0 20px;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #7abf8d;
-    }
+    
     main.contact-container {
       flex: 1;
-      max-width: 1100px;
-      margin: 50px auto 80px auto;
+      /* max-width: 1100px; */
+      margin: 50px 80px;
       padding: 0 20px;
       display: flex;
       gap: 40px;
@@ -71,7 +51,7 @@
       width: 100%;
       border: none;
       border-radius: 12px;
-      height: 450px;
+      height: 902px;
       box-shadow: 0 4px 14px #a3b9c7aa;
     }
     footer {
@@ -96,22 +76,29 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/header.css">
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="Logo" />
-    <nav>
+
+    <nav id="mainNav" class="nav-links">
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
   <main class="contact-container">
     <section class="form-section">
       <h2>Contact Us</h2>
       <!-- Replace the src below with your Google Form embed link -->
-      <iframe src="https://forms.gle/XDXnFmoKE8KWoLKDA" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://forms.gle/oMYMp3kDELNRnR968" frameborder="0" marginheight="0" marginwidth="0" scrolling="yes" allowfullscreen></iframe>
     </section>
     <section class="map-section">
       <h2>Our Location</h2>
@@ -129,5 +116,13 @@
   <footer>
     &copy; 2025 Sandeep Biological Supply House
   </footer>
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
 <script src="assets/cart.js"></script></body>
 </html>
